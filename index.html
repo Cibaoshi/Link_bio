@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Cibaoshi | Links</title>
+    <meta name="description" content="Backend Developer, Student, Gamer.">
+    <meta property="og:title" content="Cibaoshi | Links">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/169935107?v=4">
+    <meta name="theme-color" content="#0a0a0a">
+    <link rel="manifest" href="data:application/manifest+json,{%22name%22:%22Cibaoshi%20Links%22,%22short_name%22:%22Cibaoshi%22,%22start_url%22:%22.%22,%22display%22:%22standalone%22,%22background_color%22:%22#0a0a0a%22,%22theme_color%22:%22#0a0a0a%22}">
+
+    <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/169935107?v=4">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
+    <style>
+        :root { --accent-color: rgba(255, 255, 255, 0.1); }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 10px; }
+
+        * { box-sizing: border-box; cursor: none; -webkit-tap-highlight-color: transparent; user-select: none; }
+
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: #0a0a0a url('https://images.unsplash.com/photo-1502689444867-e9d77b2d4758?q=80&w=1470&auto=format&fit=crop') center/cover fixed;
+            min-height: 100vh;
+            display: flex; justify-content: center; align-items: center;
+            color: #ffffff; overflow-x: hidden; padding: 40px 0;
+        }
+
+        #cursor {
+            position: fixed; width: 22px; height: 22px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%; pointer-events: none; z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: transform 0.1s ease-out;
+            backdrop-filter: blur(4px) invert(1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.65); pointer-events: none; }
+        .container { position: relative; z-index: 10; width: 95%; max-width: 380px; margin: auto; }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(50px);
+            -webkit-backdrop-filter: blur(50px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 40px; padding: 35px 25px;
+            display: flex; flex-direction: column; align-items: center; text-align: center;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.9);
+            position: relative;
+            animation: borderPulse 6s infinite ease-in-out;
+        }
+
+        @keyframes borderPulse {
+            0%, 100% { border-color: rgba(255, 255, 255, 0.1); }
+            50% { border-color: rgba(255, 255, 255, 0.3); }
+        }
+
+        h1 { 
+            font-size: 1.8rem; margin: 0; font-weight: 800; letter-spacing: -0.5px;
+            background: linear-gradient(to right, #fff 20%, #888 40%, #888 60%, #fff 80%);
+            background-size: 200% auto; -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent; animation: shine 4s linear infinite;
+        }
+
+        @keyframes shine { to { background-position: 200% center; } }
+
+        .typewriter { font-size: 0.7rem; color: #aaa; text-transform: uppercase; letter-spacing: 2px; height: 1.2rem; margin-top: 5px; }
+
+        .avatar-container { position: relative; }
+        .tooltip {
+            position: absolute; top: 10px; right: -85px;
+            background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(10px);
+            color: #fff; padding: 5px 12px; border-radius: 10px;
+            font-size: 0.7rem; border: 1px solid rgba(255,255,255,0.1);
+            opacity: 0; transform: translateX(-10px); transition: 0.3s ease; pointer-events: none;
+        }
+        .avatar-container:hover .tooltip { opacity: 1; transform: translateX(0); }
+
+        .avatar {
+            width: 95px; height: 95px; border-radius: 50%;
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            margin-bottom: 15px; object-fit: cover;
+            animation: breathe 4s infinite ease-in-out;
+        }
+
+        @keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+        .stack { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin: 20px 0; padding: 10px; }
+        .stack i { font-size: 1.4rem; color: rgba(255,255,255,0.6); transition: 0.3s; }
+        .stack i:hover { color: #fff; transform: translateY(-5px) scale(1.2); }
+
+        .section-label { font-size: 0.6rem; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.3); margin: 15px 0 10px; width: 100%; text-align: left; }
+        
+        .projects-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; width: 100%; margin-bottom: 15px; }
+        .project-card {
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 15px; padding: 12px; text-decoration: none; color: #fff; transition: 0.3s; text-align: left;
+        }
+        .project-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-3px); border-color: rgba(255,255,255,0.2); }
+        .project-card span { font-size: 0.75rem; font-weight: 600; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .project-card p { font-size: 0.55rem; color: #777; margin: 4px 0 0; }
+
+        .time-container {
+            display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px;
+            padding: 6px 16px; background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Courier New', monospace; font-size: 0.75rem;
+        }
+
+        .greeting { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 6px; color: #aaa; }
+        .separator { width: 40px; height: 2px; background: rgba(255,255,255,0.1); margin: 5px 0 15px 0; border-radius: 2px; }
+
+        .links { width: 100%; display: flex; flex-direction: column; gap: 10px; }
+        .link-btn {
+            width: 100%; display: flex; align-items: center; justify-content: center;
+            padding: 14px; border-radius: 18px; background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.05); color: #e0e0e0;
+            text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: 0.3s all cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .link-btn.instagram:hover { border-color: #E1306C; }
+        .link-btn.twitter:hover { border-color: #1DA1F2; }
+        .link-btn.github:hover { border-color: #ffffff; }
+        .link-btn.email:hover { border-color: #EA4335; }
+        .link-btn.discord:hover { border-color: #5865F2; }
+        .link-btn.steam:hover { border-color: #171a21; }
+
+        .link-btn:hover { background: rgba(255, 255, 255, 0.1); color: #ffffff; transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .link-btn i { width: 22px; margin-right: 12px; font-size: 1rem; }
+
+        .spotify-block {
+            width: 100%; margin: 15px 0 0 0; padding: 5px;
+            background: rgba(0, 0, 0, 0.3); border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.05); display: none;
+        }
+
+        @media (max-width: 480px) { #cursor { display: none; } * { cursor: auto; } .tooltip { right: 50%; transform: translateX(50%) translateY(20px); top: 100%; } }
+    </style>
+</head>
+<body>
+
+    <div id="cursor"></div>
+    <div class="overlay"></div>
+
+    <div class="container">
+        <div class="profile-card" id="card">
+            
+            <div class="time-container"><div id="clock">00:00:00</div></div>
+
+            <div class="avatar-container">
+                <div class="tooltip">Don't touch me</div>
+                <img src="https://avatars.githubusercontent.com/u/169935107?v=4" alt="Avatar" class="avatar" loading="lazy">
+            </div>
+            
+            <div class="greeting" id="greeting">Welcome</div>
+            <h1>Cibaoshi</h1>
+            <div class="typewriter" id="typewriter"></div>
+
+            <div class="stack">
+                <i class="devicon-python-plain" title="Python"></i>
+                <i class="devicon-go-original-wordmark" title="Go"></i>
+                <i class="devicon-csharp-plain" title="C#"></i>
+                <i class="devicon-html5-plain" title="HTML5"></i>
+                <i class="devicon-vscode-plain" title="VS Code"></i>
+                <i class="devicon-github-original" title="GitHub"></i>
+            </div>
+
+            <div class="section-label">My Projects</div>
+            <div class="projects-grid">
+                <a href="https://github.com/Cibaoshi/ChatbotGo" target="_blank" class="project-card">
+                    <span>ChatbotGo</span>
+                    <p>Golang platform</p>
+                </a>
+                <a href="https://github.com/Cibaoshi/URL-Shortener" target="_blank" class="project-card">
+                    <span>URL-Shortener</span>
+                    <p>Golang project</p>
+                </a>
+            </div>
+
+            <div class="separator"></div>
+            
+            <div class="links">
+                <a href="https://www.instagram.com/ciba.oshi/?hl=ru" target="_blank" class="link-btn instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                <a href="https://x.com/OpssPi" target="_blank" class="link-btn twitter"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+                <a href="https://github.com/Cibaoshi" target="_blank" class="link-btn github"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="javascript:void(0)" onclick="copyDiscord('durexuwu')" class="link-btn discord" id="discord-btn"><i class="fa-brands fa-discord"></i> Discord</a>
+                <a href="https://steamcommunity.com/id/dream_slut/" target="_blank" class="link-btn steam"><i class="fa-brands fa-steam"></i> Steam</a>
+                <a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=mrfrissik@gmail.com" target="_blank" class="link-btn email"><i class="fa-solid fa-envelope"></i> Email</a>
+            </div>
+
+            <div class="spotify-block" id="spotify-box">
+                <img id="spotify-img" src="https://spotify-github-profile.kittinanx.com/api/view?uid=316fs2ursg74zmeurn4zqwbykbsm&cover_image=true&theme=default&show_offline=true&background_color=00000000&interchange=true&bar_color_cover=true" style="width:100%; display: block; border-radius: 18px;" loading="lazy">
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function updateUI() {
+            const now = new Date();
+            const hours = now.getHours();
+            document.getElementById('clock').innerText = now.toLocaleTimeString('ru-RU', { hour12: false });
+            
+            let greet = "Welcome";
+            if (hours >= 5 && hours < 12) greet = "Good Morning";
+            else if (hours >= 12 && hours < 18) greet = "Good Afternoon";
+            else if (hours >= 18 && hours < 23) greet = "Good Evening";
+            else greet = "Good Night";
+            document.getElementById('greeting').innerText = greet;
+        }
+        setInterval(updateUI, 1000);
+        updateUI();
+
+        const textElement = document.getElementById('typewriter');
+        const phrases = ["Backend Developer", "Student", "Gamer", "Tech Enthusiast"];
+        let pIdx = 0, cIdx = 0, isDel = false;
+
+        function type() {
+            const current = phrases[pIdx];
+            textElement.innerText = isDel ? current.substring(0, cIdx--) : current.substring(0, cIdx++);
+            if (!isDel && cIdx > current.length) { isDel = true; setTimeout(type, 2000); }
+            else if (isDel && cIdx < 0) { isDel = false; pIdx = (pIdx + 1) % phrases.length; setTimeout(type, 500); }
+            else { setTimeout(type, isDel ? 50 : 100); }
+        }
+        type();
+
+        function copyDiscord(userName) {
+            navigator.clipboard.writeText(userName);
+            const btn = document.getElementById('discord-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+            setTimeout(() => { btn.innerHTML = originalText; }, 2000);
+        }
+
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        // Исправленный блок Spotify: если высота маленькая (оффлайн), блок полностью скрывается
+        const img = document.getElementById('spotify-img');
+        const box = document.getElementById('spotify-box');
+        img.onload = () => {
+            if (img.naturalHeight > 60) {
+                box.style.display = "block";
+            } else {
+                box.style.display = "none";
+                box.remove(); // Полное удаление, чтобы не занимать место
+            }
+        };
+    </script>
+</body>
+</html>
