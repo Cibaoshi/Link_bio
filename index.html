@@ -277,16 +277,8 @@
             cursor.style.top = e.clientY + 'px';
         });
 
-        const img = document.getElementById('spotify-img');
-        const box = document.getElementById('spotify-box');
-        img.onload = () => {
-            if (img.naturalHeight > 60) {
-                box.style.display = "block";
-            } else {
-                box.style.display = "none";
-                box.remove();
-            }
-        };
+        
     </script>
 </body>
 </html>
+
